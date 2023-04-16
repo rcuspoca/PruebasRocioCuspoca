@@ -1,0 +1,18 @@
+<div class="body">
+    <div class="login">
+        <form [formGroup]="formulario" (ngSubmit)="validate()">
+        <h1>Authentication</h1>        
+        <mat-form-field appearance="fill">
+            <mat-label>Enter user</mat-label>
+            <input matInput formControlName ="user" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field mappearance="fill">
+            <mat-label>Enter password</mat-label>
+            <input matInput formControlName ="password" autocomplete="off" type="password">
+        </mat-form-field>
+        <br>
+        <button class="button" mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+    </div>
+</div> 
+

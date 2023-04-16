@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container{
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top:5px;
+}
+/*Estilos Modales*/
+
+.container-modal, .container-modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-modal .mat-form-field,  .container-modal .mat-slide-toggle{
+    padding-top: 6px;
+  }
+  
+  .container-modal .mat-dialog-actions {
+    justify-content: flex-end;
+  }
+  
+  .container-modal .mat-dialog-content {
+    max-height: 78vh !important;
+  }
+  
+  .container-modal .padding-bottom {
+    padding-bottom: 2%;
+  }
+  
+  .subtitle {
+    height: 1rem;
+    font-size: 0.75rem;
+  }

@@ -1,0 +1,57 @@
+<div class="container-modal">
+  <mat-toolbar>
+    <span>Edit Employee</span>
+    <div class="example-spacer"> </div>                
+</mat-toolbar>
+<br/>
+<br/>
+    <ng-container>          
+      <div class="form-edit">      
+          <form [formGroup]="formReactivo">
+            <mat-grid-list cols="5" rowHeight="80px" >                     
+                <mat-form-field class="ancho">
+                    <mat-label>First Name</mat-label>
+                    <input matInput autocomplete="off" formControlName="firstName"
+                            oninput="this.value = this.value.toUpperCase()"
+                            (keypress)= "validateLettersNumberSpaces($event)"
+                    >
+                </mat-form-field>           
+                <mat-form-field class="ancho">
+                    <mat-label>Second Name</mat-label>
+                    <input matInput autocomplete="off" formControlName="secondName"
+                            oninput="this.value = this.value.toUpperCase()"
+                            (keypress)= "validateLettersNumberSpaces($event)"
+                    >
+                </mat-form-field>             
+                <mat-form-field class="ancho">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput autocomplete="off" formControlName="lastName"
+                            oninput="this.value = this.value.toUpperCase()"
+                            (keypress)= "validateLettersNumberSpaces($event)"
+                    >
+                </mat-form-field>              
+                <mat-form-field class="ancho">
+                    <mat-label>Address</mat-label>
+                    <input matInput autocomplete="off" formControlName="address"
+                            oninput="this.value = this.value.toUpperCase()"
+                            (keypress)= "validateLettersNumberSpaces($event)"
+                    >
+                </mat-form-field>             
+                <mat-form-field class="ancho">
+                    <mat-label>Salary</mat-label>
+                    <input matInput autocomplete="off" formControlName="salary"                                                    
+                    >
+                </mat-form-field>
+                <br/>
+                <br/>              
+                <mat-dialog-actions>
+                  <button mat-raised-button color="primary" type="submit" [disabled]="formReactivo.invalid" >Accept</button>
+                  <button mat-raised-button color="warm" tabindex="-2"  (click)="cancel()">Cancel</button>
+                </mat-dialog-actions>                
+            </mat-grid-list>
+          </form>
+      </div>
+    </ng-container>
+  </div>
+  
+  
